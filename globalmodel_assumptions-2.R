@@ -16,7 +16,6 @@ summary(reg1)
 par(mfrow = c(2, 2))
 
 #CHECK FOR OUTLIERS IN REG1:
-#Code inspired by: https://rpubs.com/christianthieme/769935 
 plot(reg1)
 
 cd <- cooks.distance(reg1)
@@ -82,7 +81,6 @@ summary(newmod)
 plot(newmod)
 
 #OUTLIERS FOR NEWMOD:
-#Code inspired by: https://rpubs.com/christianthieme/769935 
 
 newcd <- cooks.distance(newmod)
 newinflob <- newcd[(newcd > (3 * mean(newcd, na.rm = TRUE)))]
